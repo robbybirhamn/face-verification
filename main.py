@@ -4,10 +4,15 @@ import numpy as np
 from PIL import Image
 import os
 import face_recognition
+from flask_cors import CORS
+import uuid
 
 app = Flask(__name__)
 
 app.config['UPLOAD_FOLDER'] = 'uploads'
+
+CORS(app)
+
 
 # define the Haar Cascade classifier
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
@@ -25,9 +30,9 @@ def predict():
     file = crop(request.files['image'])
     file_knowledge = crop(request.files['image_knowledge'])
 
-
     known_image = face_recognition.load_image_file(file_knowledge)
     unknown_image = face_recognition.load_image_file(file)
+
 
     known_encoding = face_recognition.face_encodings(known_image)[0]
     unknown_encoding = face_recognition.face_encodings(unknown_image)[0]
@@ -44,8 +49,6 @@ def predict():
     else:
         result = False
 
-
-
     response = {
         'data': {
             'prediction': result
@@ -55,8 +58,9 @@ def predict():
     return jsonify(response)
 
 def crop(file):
-    # save the image to the uploads folder
-    filename = file.filename
+    # generate a unique filename using a random number
+    _, ext = os.path.splitext(file.filename)
+    filename = str(uuid.uuid4()) + ext
     filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
     file.save(filepath)
     
