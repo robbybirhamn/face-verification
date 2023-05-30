@@ -65,17 +65,17 @@ def crop(file):
     filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
     file.save(filepath)
     
-     # load the image and convert it to grayscale
-    img = cv2.imread(filepath)
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    #  # load the image and convert it to grayscale
+    # img = cv2.imread(filepath)
+    # gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-    # detect faces in the image using the Haar Cascade classifier
-    faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5)
+    # # detect faces in the image using the Haar Cascade classifier
+    # faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5)
 
-    # crop the image to only show the face(s)
-    for (x, y, w, h) in faces:
-        face_img = img[y:y+h, x:x+w]
-        cv2.imwrite(filepath, face_img)
+    # # crop the image to only show the face(s)
+    # for (x, y, w, h) in faces:
+    #     face_img = img[y:y+h, x:x+w]
+    #     cv2.imwrite(filepath, face_img)
     return filepath
 
 def crop_knowledge(url):
@@ -86,17 +86,17 @@ def crop_knowledge(url):
     with open(filepath, 'wb') as f:
         f.write(response.content)
     
-     # load the image and convert it to grayscale
-    img = cv2.imread(filepath)
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    #  # load the image and convert it to grayscale
+    # img = cv2.imread(filepath)
+    # gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-    # detect faces in the image using the Haar Cascade classifier
-    faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5)
+    # # detect faces in the image using the Haar Cascade classifier
+    # faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5)
 
-    # crop the image to only show the face(s)
-    for (x, y, w, h) in faces:
-        face_img = img[y:y+h, x:x+w]
-        cv2.imwrite(filepath, face_img)
+    # # crop the image to only show the face(s)
+    # for (x, y, w, h) in faces:
+    #     face_img = img[y:y+h, x:x+w]
+    #     cv2.imwrite(filepath, face_img)
     return filepath
 
 

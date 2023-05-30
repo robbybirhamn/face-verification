@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/static/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/static/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/static/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/static/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/static/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/static/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/static/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/static/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/static/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/static/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/static/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/static/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/static/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Login - Sistem Penjamin Mutu Pendidikan</title>
+    <!-- CSS files -->
+    <link href="http://localhost:8000/assets/css/tabler.min.css?1674944402" rel="stylesheet"/>
+    <link href="http://localhost:8000/assets/css/tabler-flags.min.css?1674944402" rel="stylesheet"/>
+    <link href="http://localhost:8000/assets/css/tabler-payments.min.css?1674944402" rel="stylesheet"/>
+    <link href="http://localhost:8000/assets/css/tabler-vendors.min.css?1674944402" rel="stylesheet"/>
+    <link href="http://localhost:8000/assets/css/demo.min.css?1674944402" rel="stylesheet"/>
+    <style>
+      @import  url('https://rsms.me/inter/inter.css');
+      :root {
+      	--tblr-font-sans-serif: 'Inter Var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+      }
+      body {
+      	font-feature-settings: "cv03", "cv04", "cv11";
+      }
+    </style>
+      </head>
+  <body >
+    <script src="http://localhost:8000/assets/js/demo-theme.min.js?1674944402"></script>
+    <div class="page page-center">
+        <div class="container container-normal py-4">
+          <div class="row align-items-center g-4">
+            <div class="col-lg">
+              <div class="container-tight">
+                <div class="text-center mb-4">
+                  <a href="." class="navbar-brand navbar-brand-autodark"><img src="http://localhost:8000/assets/static/logo_spmp.svg" height="80" alt=""></a>
+                </div>
+                <div class="card card-md">
+                  <div class="card-body">
+                    <h2 class="h2 text-center mb-4">Masuk untuk akses aplikasi</h2>
+                    
+                      <div class="mb-3">
+                        <label class="form-label">Email/Username</label>
+                        <input type="email" id="input-email" class="form-control" placeholder="your@email.com" autocomplete="off">
+                      </div>
+                      <div class="mb-2">
+                        <label class="form-label">
+                          Kata Sandi
+                          <span class="form-label-description">
+                            <a href="./forgot-password.html">Lupa kata sandi?</a>
+                          </span>
+                        </label>
+                        <div class="input-group input-group-flat">
+                          <input type="password" class="form-control"  placeholder="Your password"  autocomplete="off" id="input-password">
+                          <span class="input-group-text">
+                            <a href="#" class="link-secondary" title="Show password" data-bs-toggle="tooltip"><!-- Download SVG icon from http://tabler-icons.io/i/eye -->
+                              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7" /></svg>
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mb-2">
+                        <label class="form-check">
+                          <input type="checkbox" class="form-check-input" id="input-remember"/>
+                          <span class="form-check-label">simpan akun login</span>
+                        </label>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">
+                          <img src="http://localhost:8000/captcha/default?RzZ6yI1I" alt="captcha">
+                        </label>
+                        <input type="text" id="input-captcha" class="form-control" autocomplete="off">
+                      </div>
+                      <div class="form-footer">
+                        <button type="submit" id="btn-login" class="btn btn-primary w-100">MASUK</button>
+                      </div>
+                    
+                  </div>
+                </div>
+                <div class="text-center text-muted mt-3">
+                  Belum punya akun? <a href="./sign-up.html" tabindex="-1">Daftar Sekarang</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg d-none d-lg-block">
+              <img src="http://localhost:8000/assets/static/illustrations/undraw_secure_login_pdn4.svg" height="300" class="d-block mx-auto" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <!-- Libs JS -->
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Tabler Core -->
+    <script src="http://localhost:8000/assets/js/tabler.min.js?1674944402" defer></script>
+    <script src="http://localhost:8000/assets/js/demo.min.js?1674944402" defer></script>
+
+    <script>
+      function resetErrors() {
+        $('.is-invalid').removeClass('is-invalid');
+        $('.invalid-feedback').remove();
+      }
+      function setErrors(errors) {
+        resetErrors();
+        $.each(errors, function(index, value) {
+          $("#input-"+index).addClass('is-invalid');
+          $("#input-"+index).after(`<div class="invalid-feedback">`+value+`</div>`);
+        });
+      }
+      $(document).ready(function() {
+        $('#btn-login').click(function() {
+          axios.post('http://localhost:8000/login', {
+            email: $('#input-email').val(),
+            password: $('#input-password').val(),
+            remember: $('#input-remember').val(),
+            captcha: $('#input-captcha').val(),
+          })
+          .then(function (response) {
+            Swal.fire(
+              'Berhasil!',
+              response.data.message,
+              'success'
+            ).then(function(){
+              document.location.href='/';
+            })
+          })
+          .catch(function (error) {
+            setErrors(error.response.data.errors);
+            document.location.reload();
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
